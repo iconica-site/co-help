@@ -1006,12 +1006,12 @@ body {
 
 /* Для инпута с типом "date" */
 .zakaz-in-timedate input[type="date"] {
-    background-image: url('img/icons (1).png'); /* Путь к вашей иконке календаря */
+    background-image: url('../img/icons (1).png'); /* Путь к вашей иконке календаря */
 }
 
 /* Для инпута с типом "time" */
 .zakaz-in-timedate input[type="time"] {
-    background-image: url('img/icons (2).png'); /* Путь к вашей иконке часов */
+    background-image: url('../img/icons (2).png'); /* Путь к вашей иконке часов */
 }
 .zakaz-in-timedate input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
