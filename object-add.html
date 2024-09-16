@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объекты детально</title>
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+</head>
+
+<body>
+    
+<div class="index-center">
+    <div class="index-content">
+        <form>
+            <div class="obj-step obj-step-1 active">
+                <div class="object-detail-head">
+                    <a><img src="img/icon (2).png" onclick="prevStep()"></a>
+                    <h2>Шаг 1</h2>
+                </div>
+                <div class="obj-form-group">
+                    <select>
+                        <option>Город</option>
+                        <option>Город1</option>
+                        <option>Город2</option>
+                        <option>Город3</option>
+                        <option>Город4</option>
+                    </select>
+                </div>
+                <div class="obj-form-group">
+                    <input type="text" id="addres" placeholder="Адрес">
+                </div>
+                <div class="ob-add">
+                    <div class="ob-add-kv">
+                        <input type="text" id="kv-ofis" placeholder="Кв/Офис">
+                    </div>
+                    <div class="ob-add-kv">
+                        <input type="text" id="home" placeholder="Дом">
+                    </div>
+                    <div class="ob-add-kv">
+                        <input type="text" id="stair" placeholder="Этаж">
+                    </div>
+                </div>
+                <div class="obj-form-group">
+                    <select>
+                        <option>Лифт есть</option>
+                        <option>Лифта нет</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="obj-step obj-step-2">
+                <div class="object-detail-head">
+                    <a><img src="img/icon (2).png" onclick="prevStep()"></a>
+                    <h2>Шаг 2</h2>
+                </div>
+                <div class="obj-form-group">
+                    <select>
+                        <option>Тип помещения</option>
+                        <option>Офис</option>
+                        <option>Квартира</option>
+                        <option>Частный дом</option>
+                    </select>
+                </div>
+                <div class="object-det-sostav">
+                    <span style="color: black; font-weight: 700;">Состав помещения</span>
+                    <div class="object-add-butt" style="margin-top: 20px;">
+                        <a>
+                            <img src="img/plus-circle.png">
+                            Добавить
+                        </a>
+                    </div>
+                    <div class="object-sost-m">
+                        <input type="text" placeholder="Гостинная">
+                        <input type="number" placeholder="м2">
+                    </div>
+                    <div class="object-sost-m">
+                        <input type="text" placeholder="Кухня">
+                        <input type="number" placeholder="м2">
+                    </div>
+                    <div class="object-sost-m">
+                        <input type="text" placeholder="Ванная">
+                        <input type="number" placeholder="м2">
+                    </div>
+                </div>
+                <div class="obj-add-info">
+                    <div class="add-all-room">
+                        <span>
+                            Добавьте все комнаты вашего помещения. При создании заказа вы сможете выбрать необходимые для уборки.  
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="obj-bottom-bar">
+        <div class="obj-pagination">
+            <div class="obj-dot active"></div>
+            <div class="obj-dot"></div>
+        </div>
+        <div class="obj-button-group">
+            <button type="button" id="next-btn" onclick="nextStep()">Далее</button>
+            <button type="button" id="save-btn" style="display: none;">Сохранить объект</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+
+let currentStep1 = 1;
+
+    function nextStep() {
+        if (currentStep1 < 2) {
+            currentStep1++;
+            updateStep();
+        }
+    }
+
+    function prevStep() {
+        if (currentStep1 > 1) {
+            currentStep1--;
+            updateStep();
+        }
+    }
+
+    function updateStep() {
+        // Обновляем активный шаг
+        document.querySelectorAll('.obj-step').forEach(function(step, index) {
+            if (index === currentStep1 - 1) {
+                step.classList.add('active');
+            } else {
+                step.classList.remove('active');
+            }
+        });
+
+        // Обновляем кнопки
+        updateButtons();
+
+        // Обновляем пагинацию
+        updatePagination();
+    }
+
+    function updatePagination() {
+        document.querySelectorAll('.obj-pagination .obj-dot').forEach(function(dot, index) {
+            if (index === currentStep1 - 1) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    function updateButtons() {
+        if (currentStep1 === 1) {
+            document.getElementById('next-btn').style.display = 'block';  // Показать "Далее"
+            document.getElementById('save-btn').style.display = 'none';   // Скрыть "Сохранить объект"
+        } else if (currentStep1 === 2) {
+            document.getElementById('next-btn').style.display = 'none';   // Скрыть "Далее"
+            document.getElementById('save-btn').style.display = 'block';  // Показать "Сохранить объект"
+        }
+    }
+
+    // Вызываем updateStep при загрузке страницы
+    document.addEventListener('DOMContentLoaded', updateStep);
+
+</script>
+
+</body>
+</html>

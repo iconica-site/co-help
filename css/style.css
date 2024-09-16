@@ -1,0 +1,1292 @@
+body {
+    font-family: "Nunito", sans-serif;
+    /* outline: none !important; */
+    overflow-x: hidden;
+    background-color: #FAFAFA;
+    padding-bottom: 60px;
+}
+.index-center {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.index-content {
+    max-width: 400px;
+    width: 100%; 
+}
+.type-clining {
+    max-width: 120px;
+    height: 90px;
+    width: 100%;
+    border-radius: 16px;
+    border: solid 1px #E4ECF0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.type-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.city-buttons {
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 15px;
+}
+.c-city a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    /* font-size: 12px;
+    line-height: 12px;
+    font-weight: 500; */
+}
+.c-city img {
+    margin-left: 5px;
+}
+
+.type-name span {
+    font-size: 12px;
+    line-height: 12px;
+    color: #A0B5C1;
+    display: flex;
+}
+.type-clin-main {
+    display: flex;
+}
+.swiper-container {
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.add-zakaz {
+    max-width: 200px;
+    height: 83px;
+    background-color: #16C5CA1A;
+    border: solid #16C5CA4D 1px;
+    border-radius: 12px;
+    margin-right: 10px;
+    width: 100%;
+}
+.find-klinner {
+    max-width: 200px;
+    height: 83px;
+    background-color: #FFFFFF;
+    border: solid #16C5CA4D 1px;
+    border-radius: 12px;
+    width: 100%;
+}
+.index-buttons {
+    display: flex;
+    margin-top: 20px;
+}
+.add-zakaz img, .find-klinner img {
+    padding: 15px;
+    padding-bottom: 10px;
+}
+.add-zakaz span, .find-klinner span {
+    max-width: 167px;
+    width: 100%;
+    display: flex;
+    padding-left: 15px;
+    font-size: 15px;
+    line-height: 15px;
+    color: #16C5CA;
+    font-weight: 600;
+}
+.povtor-head h2 {
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.povtor-block {
+    max-width: 240px;
+    width: 100%;
+    height: 189px;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+.pov-bl-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pov-bl-head p {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+}
+.pov-bl-date {
+    display: flex;
+    align-items: center;
+}
+.pov-bl-date img {
+    margin-right: 3px;
+}
+.pov-bl-date span {
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 400;
+    margin-top: 4px;
+}
+.pov-bl-type span, .pov-bl-dop span {
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 400;
+    color: #A0B5C1;
+}
+
+.pov-bl-type p, .pov-bl-dop p {
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 400;
+    color: #607582;
+    margin-block-start: 5px;
+    margin-block-end: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+}
+
+.pov-bl-tags span {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+    color: #A0B5C1;
+    padding: 4px;
+    background: #16C5CA1A;
+    border-radius: 100px;
+}
+
+.pov-bl-tags {
+    margin-top: 15px;
+}
+
+.best-ispol-head h2{
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.best-ispol-block {
+    max-width: 375px;
+    /* width: 100%; */
+    height: 132px;
+    border-radius: 12px;
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.best-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.best-info h4{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.best-info p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.best-img img {
+    border-radius: 12px;
+}
+.best-button {
+    display: flex;
+    justify-content: center;
+    height: 36px;
+    align-items: center;
+    border: solid 1px #16C5CA;
+    border-radius: 100px;
+    margin-top: 20px;
+}
+.best-button a{
+    color: #16C5CA;
+}
+/* Основной стиль для навбара */
+.bottom-navbar {
+    position: fixed; /* Фиксируем навбар внизу */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Высота навбара */
+    background-color: #fff; /* Цвет фона */
+    border-top: 1px solid #ddd; /* Граница сверху */
+    display: flex;
+    justify-content: space-around; /* Равномерное распределение иконок */
+    align-items: center; /* Вертикальное центрирование */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+    z-index: 1000; /* Устанавливаем приоритет, чтобы навбар был поверх контента */
+}
+
+/* Стиль для каждого элемента навбара */
+.nav-item {
+    display: flex;
+    flex-direction: column; /* Иконка над текстом */
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item span {
+    font-size: 10px;
+    line-height: 10px;
+    color: #9FBCCC;
+}
+.nav-item.active span{
+    color: #16C5CA;
+}
+
+.nav-item.active path {
+    stroke: #16C5CA;
+}
+
+.icon-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.unread-count {
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    background-color: #FC3D3D;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.popup-type {
+    max-width: 240px;
+    height: 104px;
+    background-color: white;
+    border-radius: 12px;
+    position: absolute;
+    top: 20%;
+    left: 3%;
+}
+.popup-head h5 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.popup-type-flex {
+    /* display: flex; */
+    padding: 10px;
+    padding-bottom: 0px;
+}
+.popup-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#popup-close {
+    margin-left: 110px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.popup-text p{
+    color: #607582;
+    font-size: 12px;
+    line-height: 12px;
+    margin-block-start: 5px;
+}
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Затемненный фон */
+    display: none; /* По умолчанию скрыт */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Поверх всего */
+}
+/* Когда попап открыт */
+.popup-overlay.show {
+    display: flex;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999; /* Разместить за модальным окном */
+}
+
+/* Модальное окно */
+.modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; /* Измените на 50% экрана */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
+    z-index: 1000; /* Разместить поверх фона */
+    overflow: hidden; /* Чтобы содержимое не выходило за пределы */
+    border-radius: 12px 12px 0 0;
+}
+
+.modal.show {
+    transform: translateY(0);
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    max-height: 500px;
+    height: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #E4ECF0;
+    border-radius: 12px;
+    max-width: 360px;
+    height: 51px;
+    outline: none;
+}
+.modal-content input::placeholder {
+    color: #607582;
+    font-family: "Nunito", sans-serif;
+}
+#city-input {
+    padding-left: 40px; /* Увеличьте отступ слева, чтобы текст не пересекался с фоном */
+    background: url('../img/icon 2 (2).png') no-repeat 10px center;
+    background-size: 20px 20px; /* Размер иконки */
+    width: 100%;
+    box-sizing: border-box; /* Включает отступы и границы в общую ширину */
+}
+.s-city-block p{
+    font-size: 15px;
+    line-height: 18px;
+    /* margin-block-start: 0em; */
+    margin-block-end: 5px;
+}
+
+.s-city-block span{
+    font-size: 10px;
+    line-height: 10px;
+    color: #A0B5C1;
+}
+
+.object-head h2 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+}
+.object-add-butt a {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    line-height: 18px;
+    color: #16C5CA;
+}
+.object-add-butt img {
+    margin-right: 5px;
+}
+.object-block {
+    max-width: 345px;
+    height: 158px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2); /* Небольшое затенение */
+}
+.object-addres {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.object-room span {
+    max-width: 106px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4F7F9;
+    border-radius: 8px;
+    margin-right: 10px;
+    flex: 0 0 30%;
+    margin-bottom: 10px;
+}
+.object-room {
+    display: flex;
+    flex-wrap: wrap;
+}
+.object-add-butt {
+    margin-bottom: 20px;
+}
+.object-custom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1001; /* Разместить за модальным окном */
+}
+
+.object-custom-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 345px;
+    width: 100%;
+    height: 161px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: none; /* Скрыто по умолчанию */
+    z-index: 1002; /* Разместить поверх фона */
+}
+.object-custom-popup-content {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.8px;
+}
+
+.object-custom-popup-content {
+    text-align: center;
+}
+
+.object-custom-popup-buttons {
+    margin-top: 20px;
+    display: flex;
+}
+
+.object-custom-popup-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 33px;
+    background-color: #16C5CA;
+    color: white;
+    cursor: pointer;
+    width: 151px;
+    height: 44px;
+
+}
+
+.object-custom-popup.show {
+    display: block;
+}
+
+.object-custom-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.object-detail-head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.object-detail-head h2 {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.object-det-pal {
+    display: flex;
+    gap: 20px;
+}
+.object-det-pal-inp {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.object-det-addres {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+.object-det-addres label, .object-det-pal-inp label {
+    margin-bottom: 10px;
+    color: #A0B5C1;
+    font-size: 14px;
+    line-height: 14px;
+}
+.object-det-addres input {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: #FAFAFA;
+    outline: none;
+    border-color: #E4ECF0;
+}
+
+.object-det-pal-inp input {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: #FAFAFA;
+    outline: none;
+    border-color: #E4ECF0;
+}
+.object-sost-m input[type='text'] {
+    max-height: 48px;
+    width: 85%;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid #E4ECF0 ;
+    outline: none;
+    padding-left: 10px;
+}
+
+.object-sost-m input[type='number'] {
+    height: 48px;
+    width: 15%;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid #E4ECF0 ;
+    outline: none;
+    text-align: center;
+}
+
+.object-sost-m {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.object-det-sostav span {
+    font-size: 14px;
+    line-height: 14px;
+    color: #A0B5C1;
+}
+
+.object-det-sostav {
+    margin-top: 25px;
+}
+
+.object-sost-m input[type='number']::placeholder {
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px;
+    color: #607582;
+    font-family: "Nunito", sans-serif;
+}
+
+.object-sost-m input[type='text']::placeholder {
+    font-size: 14px;
+    line-height: 14px;
+    color: #607582;
+    font-family: "Nunito", sans-serif;
+}
+.object-det-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.object-det-delete a{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #16C5CA;
+}
+
+.obj-step {
+    display: none;
+}
+
+.obj-step.active {
+    display: block;
+}
+
+.obj-button-group {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.obj-step-button {
+    width: 200px;
+    height: 40px;
+    background-color: #16C5CA;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.obj-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.obj-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.obj-form-group {
+    margin-bottom: 15px;
+}
+.obj-form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.obj-form-group input {
+    height: 48px;
+    width: 98%;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid #E4ECF0;
+    outline: none;
+    padding-left: 10px;
+}
+
+.obj-button-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #00C4CC;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 90%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+
+}
+.obj-step-2 .composition-block {
+    margin-top: 20px;
+}
+.obj-composition-block .input-group {
+    margin-bottom: 10px;
+}
+.obj-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 70px;
+}
+.obj-pagination .obj-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #16C5CA4D;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.obj-pagination .obj-dot.active {
+    background-color: #00C4CC;
+    border-radius: 30%;
+    width: 20px;
+}
+.ob-add {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
+.ob-add-kv {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+}
+.ob-add-kv input::placeholder {
+    color: #607582;
+    font-family: "Nunito", sans-serif;
+}
+.obj-form-group input::placeholder {
+    color: #607582;
+    font-family: "Nunito", sans-serif;
+}
+.ob-add-kv input{
+    height: 48px;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid #E4ECF0;
+    outline: none;
+    padding-left: 10px;
+}
+.obj-form-group select {
+    height: 48px;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid #E4ECF0;
+    outline: none;
+    width: 101%;
+    padding-left: 10px;
+    color: #A0B5C1;
+    font-family: "Nunito", sans-serif;
+}
+.obj-add-info {
+    margin: 0 auto;
+    width: 235px;
+    margin-top: 20px;
+    text-align: center;
+}
+.add-all-room {
+    border: solid 1px #16C5CA33;
+    border-radius: 12px;
+    padding: 10px;
+}
+.add-all-room span{
+    color: #607582;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.step {
+    display: none;
+    min-height: calc(100vh - 90px); /* Оставляем место для кнопки и пагинации */
+}
+.step.active {
+    display: block;
+}
+.step-header {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.step-header img {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.input-block {
+    margin-bottom: 15px;
+}
+.input-block label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+/* input[type="text"], input[type="date"], input[type="time"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+} */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: white;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: solid 1px #E4ECF0;
+    z-index: 2;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.pagination .step-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #16C5CA4D;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.pagination .step-indicator.active {
+    background-color: #00C4CC;
+    border-radius: 30%;
+    width: 20px;
+}
+.button {
+    background-color: #00C4CC;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 90%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    align-items: center;
+}
+.publish-button {
+    background-color: #00C4CC;
+    display: none;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 90%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    align-items: center;
+}
+.total-amount { display: none; font-size: 18px; font-weight: bold;  color: black;}
+.total-amount.active { display: block; max-width: 400px; width: 100%;}
+.publish-button.active { display: block; }
+/* Скрываем оригинальный радио */
+.z-t-object input[type="radio"] {
+    display: none;
+}
+
+
+.zakaz-in-raiting input[type="radio"] {
+    display: none;
+}
+
+/* Контейнер для радио кнопки */
+.zakaz-custom-radio {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #A0B5C1; /* Цвет бордера */
+    position: relative;
+    cursor: pointer;
+}
+
+        /* Контейнер для радио кнопки */
+.zakaz-custom-radio-raiting {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #A0B5C1; /* Цвет бордера */
+    position: relative;
+    cursor: pointer;
+}
+
+/* Внутренний круг при состоянии по умолчанию */
+.zakaz-custom-radio::before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: white; /* Внутри белый */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.zakaz-custom-radio-raiting::before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: white; /* Внутри белый */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* При нажатии радио */
+.z-t-object input[type="radio"]:checked + .zakaz-custom-radio::before {
+    background-color: #16C5CA; /* Цвет при нажатии */
+    width: 16px;
+    height: 16px;
+}
+
+/* При нажатии радио */
+.zakaz-in-raiting input[type="radio"]:checked + .zakaz-custom-radio-raiting::before {
+    background-color: #16C5CA; /* Цвет при нажатии */
+    width: 16px;
+    height: 16px;
+}
+
+/* Добавляем текст рядом с радио-кнопкой */
+.zakaz-radio-label {
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.zakaz-in-timedate {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.zakaz-time-and-date {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.zakaz-time-and-date label {
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 700;
+}
+.zakaz-in-raiting {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.zakaz-raiting  label {
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 700;
+    display: flex;
+    flex: 0 0 48%;
+    align-items: center;
+}
+.zakaz-take-object {
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 700;
+}
+ /* Общие стили для инпутов */
+.zakaz-in-timedate input[type="date"], 
+.zakaz-in-timedate input[type="time"] {
+    padding-left: 40px; /* Отступ для картинки */
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    outline: none;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 130px center;
+}
+
+/* Для инпута с типом "date" */
+.zakaz-in-timedate input[type="date"] {
+    background-image: url('img/icons (1).png'); /* Путь к вашей иконке календаря */
+}
+
+/* Для инпута с типом "time" */
+.zakaz-in-timedate input[type="time"] {
+    background-image: url('img/icons (2).png'); /* Путь к вашей иконке часов */
+}
+.zakaz-in-timedate input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.zakaz-in-timedate input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+.zakaz-in-timedate input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.zakaz-in-timedate input[type="time"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+.type-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.type-name h4 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+}
+.type-clean-block {
+    max-width: 343px;
+    height: 106px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 12px;
+}
+/* Активный стиль блока */
+.type-clean-block.active {
+    border: solid 1px #16C5CA;
+}
+.type-clean-block p {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #607582;
+}
+
+.type-clean-block span {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    color: black;
+}
+.zakaz-addres span {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+    color: black;
+}
+.zakaz-addres {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.zakaz-addres img {
+    margin-right: 10px;
+}
+.zakaz-sostav-pom label {
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 700;
+}
+
+/* Скрываем стандартный чекбокс */
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+/* Стиль кастомного чекбокса */
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-checkbox .checkbox-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    border: 1px solid #16C5CA;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-checkbox .checkbox-box::after {
+    content: '';
+    width: 5px;
+    height: 13px;
+    border: solid 2px #16C5CA;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+}
+
+/* Стили для активного состояния чекбокса */
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-box::after {
+    opacity: 1;
+}
+
+.custom-checkbox .checkbox-label {
+    margin-left: 8px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.home-img-block {
+    max-width: 80px;
+    max-height: 100px;
+    width: 100%;
+    height: 100%;
+}
+.home-img-close-icon {
+    position: relative;
+    bottom: 102px;
+    left: 58px;
+    width: 20px; /* Ширина и высота крестика */
+    height: 20px;
+    cursor: pointer; /* Курсор-указатель при наведении */
+}
+.zakaz-home-img {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.home-img-block a {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    width: 120px;
+    display: flex;
+    color: #16C5CA;
+}
+.zakaz-comment label {
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 700;
+}
+.zakaz-comment {
+    display: flex;
+    flex-direction: column;
+}
+.zakaz-comment textarea {
+    height: 120px;
+    padding: 10px;
+    outline: none;
+    border: solid 1px #E4ECF0;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+.zakaz-comment textarea::placeholder {
+    color: #607582;
+    font-family: "Nunito", sans-serif;
+}
+.zakaz-itogo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.zakaz-itogo span{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+}
+.itogo-and-img span {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+}
+.itogo-and-img {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dop-clean-block {
+    max-width: 109px;
+    height: 152px;
+    border-radius: 12px;
+    border: solid 1px #E4ECF0;
+}
+
+
+
+.dop-clean-card {
+    margin-bottom: 8px;
+    width: 109px;
+    height: 152px;
+    border: 1px solid #E4ECF0;
+    border-radius: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    flex: 0 0 29.6%;
+    margin-right: 10px;
+}
+
+.dop-clean-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #F9E1E8; /* Розовый цвет */
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dop-clean-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-top: 2px;
+    z-index: 1;
+    margin-right: 10px;
+}
+
+.dop-clean-info-icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 16px;
+    color: #BCC5C8;
+}
+
+.dop-clean-title {
+    /* margin-top: 15px; */
+    font-size: 10px;
+    line-height: 13px;
+    font-weight: 400;       
+    color: #3A3A3A;
+    height: 24px;
+}
+
+.dop-clean-quantity {
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 400;
+    color: #A0B5C1;
+    margin: 15px 0;
+}
+
+.dop-clean-price {
+    background-color: #16C5CA4D;
+    color: #000;
+    border-radius: 8px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+}
+.zakaz-dop-clean {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.dop-clean-card.active {
+    border: solid 1px #16C5CA;
+}

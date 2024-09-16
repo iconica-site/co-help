@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объекты детально</title>
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+
+</head>
+<body>
+    <div class="index-center">
+        <div class="index-content">
+            <div class="step active" id="step-1">
+                <div class="step-header">
+                    <img src="img/icon (2).png" alt="Назад" style="display: none;">
+                    Создать заказ
+                </div>
+                <div class="input-block">
+                    <label class="zakaz-take-object">Выберите объект</label>
+                    <div class="object-add-butt">
+                        <a>
+                            <img src="img/plus-circle.png">
+                            Добавить объект
+                        </a>
+                    </div>
+                    <div class="zakaz-object-take">
+                        <div class="z-t-object">
+                            <label>
+                                <input type="radio" name="zakaz-radio-group">
+                                <span class="zakaz-custom-radio"></span>
+                                <span class="zakaz-radio-label">1901 Thornridge Cir. Shiloh, Hawaii </span>
+                            </label>
+                            <label>
+                                <input type="radio" name="zakaz-radio-group">
+                                <span class="zakaz-custom-radio"></span>
+                                <span class="zakaz-radio-label">4140 Parker Rd. Allentown, New Mexico</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="zakaz-radio-group">
+                                <span class="zakaz-custom-radio"></span>
+                                <span class="zakaz-radio-label">2972 Westheimer Rd. Santa Ana, Illinois</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="zakaz-time-and-date">
+                    <label>Желаемая дата уборки</label>
+                    <div class="zakaz-in-timedate">
+                        <input type="date" placeholder="Дата">
+                        <input type="time" placeholder="Время">
+                    </div>
+                </div>
+                <div class="zakaz-raiting">
+                    <label>Желаемый рейтинг для исполнителя</label>
+                    <div class="zakaz-in-raiting">
+                        <label>
+                            <input type="radio" name="zakaz-radio-group-raiting">
+                            <span class="zakaz-custom-radio-raiting"></span>
+                            <span class="zakaz-radio-label">любой</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="zakaz-radio-group-raiting">
+                            <span class="zakaz-custom-radio-raiting"></span>
+                            <span class="zakaz-radio-label">от 3*</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="zakaz-radio-group-raiting">
+                            <span class="zakaz-custom-radio-raiting"></span>
+                            <span class="zakaz-radio-label">от 4*</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="zakaz-radio-group-raiting">
+                            <span class="zakaz-custom-radio-raiting"></span>
+                            <span class="zakaz-radio-label">от 5*</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Шаг 2 -->
+            <div class="step" id="step-2">
+                <div class="step-header">
+                    <img src="img/icon (2).png" alt="Назад" onclick="prevStep()">
+                    Выберите тип уборки
+                </div>
+                <div class="zakaz-type-clean">
+                    <div class="type-clean-block">
+                        <div class="type-name">
+                            <h4>Поддерживающая</h4>
+                            <img src="img/info.png">
+                        </div>
+                        <p>Срок выполнения: от 2 до 4 часов</p>
+                        <span>Стоимость: от 150 $</span>
+                    </div>
+
+                    <div class="type-clean-block">
+                        <div class="type-name">
+                            <h4>Генеральная</h4>
+                            <img src="img/info.png">
+                        </div>
+                        <p>Срок выполнения: от 4 до 6 часов</p>
+                        <span>Стоимость: от 450 $</span>
+                    </div>
+
+                    <div class="type-clean-block">
+                        <div class="type-name">
+                            <h4>Все включено</h4>
+                            <img src="img/info.png">
+                        </div>
+                        <p>Срок выполнения: от 4 до 8 часов</p>
+                        <span>Стоимость: от 150 $</span>
+                    </div>
+
+                    <div class="type-clean-block">
+                        <div class="type-name">
+                            <h4>После ремонта</h4>
+                            <img src="img/info.png">
+                        </div>
+                        <p>Срок выполнения: от 3 до 7 часов</p>
+                        <span>Стоимость: от 150 $</span>
+                    </div>
+
+                    <div class="type-clean-block">
+                        <div class="type-name">
+                            <h4>После арендаторов</h4>
+                            <img src="img/info.png">
+                        </div>
+                        <p>Срок выполнения: от 3 до 6 часов</p>
+                        <span>Стоимость: от 150 $</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Шаг 3 -->
+            <div class="step" id="step-3">
+                <div class="step-header">
+                    <img src="img/icon (2).png" alt="Назад" onclick="prevStep()">
+                    Выберите помещение
+                </div>
+                <div class="zakaz-addres">
+                    <img src="img/map-pin (2).png">
+                    <span>1901 Thornridge Cir. Shiloh, Hawaii </span>
+                </div>
+
+                <div class="zakaz-sostav-pom">
+                    <label>Состав помещения</label>
+                    <div class="object-sost-m">
+                        <label class="custom-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-box"></span>
+                        </label>
+                        <input type="text" placeholder="Гостинная">
+                        <input type="number" placeholder="м2">
+                    </div>
+                    <div class="zakaz-home-img">
+                        <div class="home-img-block">
+                            <img src="img/Rectangle 30.png">
+                            <img src="img/x-circle.png" alt="Close Icon" class="home-img-close-icon">
+                        </div>
+                        <div class="home-img-block">
+                            <img src="img/Rectangle 30.png">
+                            <img src="img/x-circle.png" alt="Close Icon" class="home-img-close-icon">
+                        </div>
+                        <div class="home-img-block">
+                            <img src="img/Rectangle 30.png">
+                            <img src="img/x-circle.png" alt="Close Icon" class="home-img-close-icon">
+                        </div>
+                    </div>
+                    <div class="object-sost-m">
+                        <label class="custom-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-box"></span>
+                        </label>
+                        <input type="text" placeholder="Кухня">
+                        <input type="number" placeholder="м2">
+                    </div>
+                    <div class="zakaz-home-img">
+                        <div class="home-img-block">
+                            <a>Добавить фото</a>
+                        </div>
+                    </div>
+                    <div class="object-sost-m">
+                        <label class="custom-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-box"></span>
+                        </label>
+                        <input type="text" placeholder="Ванная">
+                        <input type="number" placeholder="м2">
+                    </div>
+                    <div class="zakaz-home-img">
+                        <div class="home-img-block">
+                            <a>Добавить фото</a>
+                        </div>
+                    </div>
+                    <div class="zakaz-comment">
+                        <label>Комментарии к заказу</label>
+                        <textarea placeholder="Добавьте комментарий для исполнителя..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Шаг 4 -->
+            <div class="step" id="step-4">
+                <div class="step-header">
+                    <img src="img/icon (2).png" alt="Назад" onclick="prevStep()">
+                    Дополнительные опции
+                </div>
+                <div class="zakaz-dop-clean">
+                    <div class="dop-clean-card">
+                        <img src="img/info.png" class="dop-clean-info-icon">
+                        <div class="dop-clean-circle"></div>
+                        <img src="img/Property 1=vacuum.png" class="dop-clean-icon">
+                        <div class="dop-clean-title">Свой пылесос</div>
+                        <div class="dop-clean-quantity">1 шт</div>
+                        <div class="dop-clean-price">+100 $</div>
+                    </div>
+                    <div class="dop-clean-card">
+                        <img src="img/info.png" class="dop-clean-info-icon">
+                        <div class="dop-clean-circle"></div>
+                        <img src="img/Property 1=window.png" class="dop-clean-icon"> 
+                        <div class="dop-clean-title">Мойка окон</div>
+                        <div class="dop-clean-quantity">1 шт</div>
+                        <div class="dop-clean-price">+100 $</div>
+                    </div>
+                    <div class="dop-clean-card">
+                        <img src="img/info.png" class="dop-clean-info-icon">
+                        <div class="dop-clean-circle"></div>
+                        <img src="img/Property 1=wipe.png" class="dop-clean-icon"> 
+                        <div class="dop-clean-title">Мойка остекления балкона</div>
+                        <div class="dop-clean-quantity">1 шт</div>
+                        <div class="dop-clean-price">+100 $</div>
+                    </div>
+                    <div class="dop-clean-card">
+                        <img src="img/info.png" class="dop-clean-info-icon">
+                        <div class="dop-clean-circle"></div>
+                        <img src="img/Property 1=broom.png" class="dop-clean-icon"> 
+                        <div class="dop-clean-title">Уборка балкона</div>
+                        <div class="dop-clean-quantity">1 шт</div>
+                        <div class="dop-clean-price">+100 $</div>
+                    </div>
+                    <div class="dop-clean-card">
+                        <img src="img/info.png" class="dop-clean-info-icon">
+                        <div class="dop-clean-circle"></div>
+                        <img src="img/Property 1=iron.png" class="dop-clean-icon">
+                        <div class="dop-clean-title">Глажка вещей</div>
+                        <div class="dop-clean-quantity">1 шт</div>
+                        <div class="dop-clean-price">+100 $</div>
+                    </div>
+                    <div class="dop-clean-card">
+                        <img src="img/info.png" class="dop-clean-info-icon">
+                        <div class="dop-clean-circle"></div>
+                        <img src="img/Property 1=fridge.png" class="dop-clean-icon"> 
+                        <div class="dop-clean-title">Внутри холодильника</div>
+                        <div class="dop-clean-quantity">1 шт</div>
+                        <div class="dop-clean-price">+100 $</div>
+                    </div>
+                    <div class="dop-clean-card">
+                        <img src="img/info.png" class="dop-clean-info-icon">
+                        <div class="dop-clean-circle"></div>
+                        <img src="img/Property 1=stove.png" class="dop-clean-icon">
+                        <div class="dop-clean-title">Внутри духовки</div>
+                        <div class="dop-clean-quantity">1 шт</div>
+                        <div class="dop-clean-price">+100 $</div>
+                    </div>
+                    <div class="dop-clean-card">
+                        <img src="img/info.png" class="dop-clean-info-icon">
+                        <div class="dop-clean-circle"></div>
+                        <img src="img/Property 1=oven.png" class="dop-clean-icon"> 
+                        <div class="dop-clean-title">Внутри микроволновки</div>
+                        <div class="dop-clean-quantity">1 шт</div>
+                        <div class="dop-clean-price">+100 $</div>
+                    </div>
+                    <div class="dop-clean-card">
+                        <img src="img/info.png" class="dop-clean-info-icon">
+                        <div class="dop-clean-circle"></div>
+                        <img src="img/Property 1=furniture.png" class="dop-clean-icon">
+                        <div class="dop-clean-title">Внутри кухонных шкафов</div>
+                        <div class="dop-clean-quantity">1 шт</div>
+                        <div class="dop-clean-price">+100 $</div>
+                    </div>
+                    <div class="dop-clean-card">
+                        <img src="img/info.png" class="dop-clean-info-icon">
+                        <div class="dop-clean-circle"></div>
+                        <img src="img/Property 1=hanger.png" class="dop-clean-icon"> 
+                        <div class="dop-clean-title">Уборка в гардеробной</div>
+                        <div class="dop-clean-quantity">1 шт</div>
+                        <div class="dop-clean-price">+100 $</div>
+                    </div>
+                    <div class="dop-clean-card">
+                        <img src="img/info.png" class="dop-clean-info-icon">
+                        <div class="dop-clean-circle"></div>
+                        <img src="img/Property 1=pet.png" class="dop-clean-icon"> 
+                        <div class="dop-clean-title">Мытье лотка питомца</div>
+                        <div class="dop-clean-quantity">1 шт</div>
+                        <div class="dop-clean-price">+100 $</div>
+                    </div>
+                    <div class="dop-clean-card">
+                        <img src="img/info.png" class="dop-clean-info-icon">
+                        <div class="dop-clean-circle"></div>
+                        <img src="img/Property 1=chandelier.png" class="dop-clean-icon"> 
+                        <div class="dop-clean-title">Чистка люстры</div>
+                        <div class="dop-clean-quantity">1 шт</div>
+                        <div class="dop-clean-price">+100 $</div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Нижняя панель с кнопкой и пагинацией -->
+    <div class="bottom-bar">
+        <div class="pagination">
+            <div class="step-indicator active"></div>
+            <div class="step-indicator"></div>
+            <div class="step-indicator"></div>
+            <div class="step-indicator"></div>
+        </div>
+        <div class="total-amount">
+            <div class="zakaz-itogo">
+                <span>Итого:</span>
+                <div class="itogo-and-img">
+                    <span>~1000$</span>
+                    <img src="img/info.png">
+                </div>
+            </div>
+        </div>
+        <button class="button" id="next-button" onclick="nextStep()">Далее</button>
+        <button class="publish-button" id="publish-button" onclick="publishOrder()">Опубликовать заказ</button>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+
+    let currentStep = 1;
+
+    function nextStep() {
+        document.getElementById('step-' + currentStep).classList.remove('active');
+        currentStep++;
+        if (currentStep > 4) {
+            currentStep = 4; // Ограничиваем количество шагов
+        }
+        document.getElementById('step-' + currentStep).classList.add('active');
+        updatePagination();
+        updateButtonAndTotal();
+    }
+
+    function prevStep() {
+        document.getElementById('step-' + currentStep).classList.remove('active');
+        currentStep--;
+        if (currentStep < 1) {
+            currentStep = 1; // Ограничиваем количество шагов
+        }
+        document.getElementById('step-' + currentStep).classList.add('active');
+        updatePagination();
+        updateButtonAndTotal();
+    }
+
+    function updatePagination() {
+        const indicators = document.querySelectorAll('.step-indicator');
+        indicators.forEach((indicator, index) => {
+            indicator.classList.remove('active');
+            if (index + 1 === currentStep) {
+                indicator.classList.add('active');
+            }
+        });
+    }
+
+    function updateButtonAndTotal() {
+        const nextButton = document.getElementById('next-button');
+        const publishButton = document.getElementById('publish-button');
+        const totalAmount = document.querySelector('.total-amount');
+        const pagination = document.querySelector('.pagination');
+
+        if (currentStep === 4) {
+            nextButton.style.display = 'none'; // Скрыть кнопку "Далее"
+            publishButton.classList.add('active'); // Показать кнопку "Опубликовать заказ"
+            totalAmount.classList.add('active'); // Показать "Итого"
+            pagination.style.display = 'none'; // Скрыть пагинацию
+        } else {
+            nextButton.style.display = 'block'; // Показать кнопку "Далее"
+            publishButton.classList.remove('active'); // Скрыть кнопку "Опубликовать заказ"
+            totalAmount.classList.remove('active'); // Скрыть "Итого"
+            pagination.style.display = 'flex'; // Показать пагинацию
+        }
+    }
+
+    function publishOrder() {
+        alert("Заказ опубликован!");
+        // Здесь можно добавить логику для публикации заказа
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var blocks = document.querySelectorAll('.type-clean-block');
+        blocks.forEach(function(block) {
+            block.addEventListener('click', function() {
+                blocks.forEach(function(b) { b.classList.remove('active'); });
+                this.classList.add('active');
+            });
+        });
+    });
+
+    document.querySelectorAll('.dop-clean-card').forEach(function(card) {
+        card.addEventListener('click', function() {
+            // Удаляем класс 'active' у всех карточек
+            document.querySelectorAll('.dop-clean-card').forEach(function(c) {
+                c.classList.remove('active');
+            });
+            // Добавляем класс 'active' к текущей карточке
+            this.classList.add('active');
+        });
+    });
+
+    </script>
+
+</body>
+</html>
