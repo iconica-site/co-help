@@ -22,6 +22,72 @@ var swiper2 = new Swiper('.povtor-main', {
     loop: false, // Отключаем бесконечную прокрутку
 });
 
+var swiper3 = new Swiper('.zakazi-isp-slide', {
+    slidesPerView: 'auto', // чтобы не листалось по одному слайду надо здесь поставить авто и добавить freeMode true
+    spaceBetween: 10, // отступ
+    speed: 800, // Плавная прокрутка
+    freeMode: true, // написал выше
+    effect: 'slide', // Эффект плавного перехода
+    touchRatio: 1.5, // Увеличение чувствительности при свайпе
+    resistanceRatio: 0.8, // Плавное сопротивление при достижении конца слайдера
+    // grabCursor: true, // Указатель мыши меняется на "руку"
+    loop: false, // Отключаем бесконечную прокрутку
+});
+
+var swiper4 = new Swiper('.lich-otzivi-main', {
+    slidesPerView: 'auto', // чтобы не листалось по одному слайду надо здесь поставить авто и добавить freeMode true
+    spaceBetween: 10, // отступ
+    speed: 800, // Плавная прокрутка
+    freeMode: true, // написал выше
+    effect: 'slide', // Эффект плавного перехода
+    touchRatio: 1.5, // Увеличение чувствительности при свайпе
+    resistanceRatio: 0.8, // Плавное сопротивление при достижении конца слайдера
+    // grabCursor: true, // Указатель мыши меняется на "руку"
+    loop: false, // Отключаем бесконечную прокрутку
+});
+
+var swiper5 = new Swiper('.lich-history-main', {
+    slidesPerView: 'auto', // чтобы не листалось по одному слайду надо здесь поставить авто и добавить freeMode true
+    spaceBetween: 10, // отступ
+    speed: 800, // Плавная прокрутка
+    freeMode: true, // написал выше
+    effect: 'slide', // Эффект плавного перехода
+    touchRatio: 1.5, // Увеличение чувствительности при свайпе
+    resistanceRatio: 0.8, // Плавное сопротивление при достижении конца слайдера
+    // grabCursor: true, // Указатель мыши меняется на "руку"
+    loop: false, // Отключаем бесконечную прокрутку
+});
+
+var swiper6 = new Swiper('.kart-img-slider-main', {
+    slidesPerView: 'auto', // чтобы не листалось по одному слайду надо здесь поставить авто и добавить freeMode true
+    spaceBetween: 10, // отступ
+    speed: 800, // Плавная прокрутка
+    freeMode: true, // написал выше
+    effect: 'slide', // Эффект плавного перехода
+    touchRatio: 1.5, // Увеличение чувствительности при свайпе
+    resistanceRatio: 0.8, // Плавное сопротивление при достижении конца слайдера
+    // grabCursor: true, // Указатель мыши меняется на "руку"
+    loop: false, // Отключаем бесконечную прокрутку
+});
+
+// Карточка заказа Доп Услуги - Развернуть
+document.querySelector('.kartochka-toggle-button').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const infoBlock = document.querySelector('.kartochka-info-date-dopusluga');
+    const img = document.querySelector('.kartochka-toggle-image');
+    
+    // Переключение высоты блока
+    if (infoBlock.classList.contains('expanded')) {
+        infoBlock.classList.remove('expanded');
+    } else {
+        infoBlock.classList.add('expanded');
+    }
+    
+    // Переворот изображения
+    img.classList.toggle('rotated');
+});
+
 // Для нав бара актив для кнопок
 const navItems = document.querySelectorAll('.nav-item');
 

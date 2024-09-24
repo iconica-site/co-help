@@ -16,57 +16,6 @@
     <link rel="stylesheet" href="css/style-media.css">
 </head>
 
-<style>
-
-.zakazi-slidebar-block {
-    display: flex;
-    white-space: nowrap;
-    align-items: center;
-    background-color: #F4F7F9;
-    border-radius: 100px;
-    /* border: 1px solid; */
-    padding: 7px;
-    max-width: 100px;
-    justify-content: center;
-}
-.zakazi-slidebar-block.active {
-    background-color: #333333;
-    color: #FFFFFF;
-}
-.zakazi-slidebar-block span{
-    color: #A0B5C1;
-}
-.zakazi-isp-slide {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 15px;
-}
-.zakazi-isp-card-z {
-    margin-top: 30px;
-    display: none;
-}
-.isp-zakaz-tags span{
-    padding: 5px;
-    background-color: #F4F7F9;
-    color: #607582;
-    font-size: 12px;
-    line-height: 12px;
-    font-weight: 400;
-    border-radius: 10px;
-}
-.activnie-zakaz-tags span {
-    padding: 5px;
-    background-color: #F4F7F9;
-    color: #16C5CA;
-    font-size: 12px;
-    line-height: 12px;
-    font-weight: 400;
-    border-radius: 10px;
-}
-.zakazi-isp-card-z.active {
-    display: block;
-}
-</style>
 
 <body>
     <div class="index-center">
@@ -679,17 +628,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-var swiper3 = new Swiper('.zakazi-isp-slide', {
-    slidesPerView: 'auto', // чтобы не листалось по одному слайду надо здесь поставить авто и добавить freeMode true
-    spaceBetween: 10, // отступ
-    speed: 800, // Плавная прокрутка
-    freeMode: true, // написал выше
-    effect: 'slide', // Эффект плавного перехода
-    touchRatio: 1.5, // Увеличение чувствительности при свайпе
-    resistanceRatio: 0.8, // Плавное сопротивление при достижении конца слайдера
-    // grabCursor: true, // Указатель мыши меняется на "руку"
-    loop: false, // Отключаем бесконечную прокрутку
-});
 
 </script>
 </body>
