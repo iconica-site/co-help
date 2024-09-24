@@ -70,24 +70,6 @@ var swiper6 = new Swiper('.kart-img-slider-main', {
     loop: false, // Отключаем бесконечную прокрутку
 });
 
-// Карточка заказа Доп Услуги - Развернуть
-document.querySelector('.kartochka-toggle-button').addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    const infoBlock = document.querySelector('.kartochka-info-date-dopusluga');
-    const img = document.querySelector('.kartochka-toggle-image');
-    
-    // Переключение высоты блока
-    if (infoBlock.classList.contains('expanded')) {
-        infoBlock.classList.remove('expanded');
-    } else {
-        infoBlock.classList.add('expanded');
-    }
-    
-    // Переворот изображения
-    img.classList.toggle('rotated');
-});
-
 // Для нав бара актив для кнопок
 const navItems = document.querySelectorAll('.nav-item');
 
@@ -203,6 +185,24 @@ document.addEventListener('DOMContentLoaded', function() {
         popup.classList.remove('show');
         overlay.classList.remove('show');
     });
+});
+
+// Карточка заказа Доп Услуги - Развернуть
+document.querySelector('.kartochka-toggle-button').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const infoBlock = document.querySelector('.kartochka-info-date-dopusluga');
+    const img = document.querySelector('.kartochka-toggle-image');
+    
+    // Переключение высоты блока
+    if (infoBlock.classList.contains('expanded')) {
+        infoBlock.classList.remove('expanded');
+    } else {
+        infoBlock.classList.add('expanded');
+    }
+    
+    // Переворот изображения
+    img.classList.toggle('rotated');
 });
 
 
