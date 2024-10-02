@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница (исполнитель)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+</head>
+
+<style>
+.yurlic-sozdati-schet span {
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #16C5CA1A;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #16C5CA;
+}
+.yurlic-sozdati-schet {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+</style>
+
+<body>
+    <div class="index-center">
+        <div class="index-content">
+
+            <div class="filters-overlay show" id="filters-overlay"></div>
+
+            <div class="filters-modal show" id="filters-modal">
+                <div class="filters-modal-content">
+                    <span class="filters-close" id="filters-close-modal">&times;</span>
+                    <div class="filters-modal-head">
+                        <h2>Оплата</h2>
+                    </div>
+                    <div class="oplata-zakaza-modal">
+                        <div class="kartochka-info-block">
+                            <div class="kartochka-info-main">
+                                <p>Москва, ул. Нарвская 11/3, 17 этаж, лифт</p>
+                                <span>4000 руб</span>
+                            </div>
+                            <div class="kartochka-info-date-usluga">
+                                <span>Дата и время</span>
+                                <p>09.09.2024, 15:30</p>
+                            </div>
+                            <div class="kartochka-info-date-usluga">
+                                <span>Услуги</span>
+                                <p>Генеральная уборка</p>
+                            </div>
+                            <div class="kartochka-info-date-dopusluga">
+                                <span>Доп услуги</span>
+                                <p>Мойка остекленного балкона</p>
+                                <p>Мойка остекленного балкона</p>
+                                <p>Мойка остекленного балкона</p>
+                                <p>Мойка остекленного балкона</p>
+                                <p>Мойка остекленного балкона</p>
+                            </div>
+                            <div class="kartochka-button-razvern">
+                                <a class="kartochka-toggle-button">Развернуть</a>
+                                <img src="img/icon (18).png" class="kartochka-toggle-image">
+                            </div>
+                        </div>
+                        <div class="sposobi-oplati">
+                            <h2>Способы оплаты</h2>
+                            <div class="z-t-object sposobi-oplati-karti">
+                                <label>
+                                    <input type="radio" name="zakaz-radio-group">
+                                    <span class="zakaz-custom-radio"></span>
+                                    <img src="img/visa.png">
+                                    <span class="zakaz-radio-label">Visa **** 1509</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="zakaz-radio-group">
+                                    <span class="zakaz-custom-radio"></span>
+                                    <img src="img/visa.png">
+                                    <span class="zakaz-radio-label">Visa **** 1508</span>
+                                </label>
+                            </div>
+                            <div class="yurlic-sozdati-schet">
+                                <span>Создать счет на оплату</span>
+                                <span>Выставить счет-фактуру</span>
+                            </div>
+                            <div class="object-add-butt">
+                                <a>
+                                    <img src="img/plus-circle.png">
+                                    Привязать карту
+                                </a>
+                            </div>
+                            <div class="sposobi-oplati-pl-bez">
+                                <div class="sp-op-pl-bez">
+                                    <img src="img/shield.png">
+                                    <span>Платеж безопасен</span>
+                                </div>
+
+                                <div class="sp-op-pl-bez">
+                                    <img src="img/check-circle (1).png">
+                                    <span>Зарезервируем сумму на вашей карте и спишем после выполнения заказа</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="new-modal-button-group">
+                        <button type="button" class="object-open-delete-popup">Оплатить 4000 руб</button>
+                    </div>
+
+
+                    
+                </div>
+            </div>
+            
+            <div class="object-custom-overlay" id="object-delete-popup-overlay"></div>
+
+            <div class="object-custom-popup vash-zakaz-oplachen" id="object-delete-popup">
+                <div class="object-custom-popup-content">
+                    <img src="img/check-circle (2).png">
+                    <h2>Заказ успешно оплачен</h2>
+                    <p>Зарезервируем сумму на вашем аккаунте и спишем после выполнения заказа</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+
+</script>
+</body>
+</html>

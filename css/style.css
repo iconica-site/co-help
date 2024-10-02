@@ -3715,3 +3715,17 @@ body {
     line-height: 20px;
     font-weight: 400;
 }
+
+.yurlic-sozdati-schet span {
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #16C5CA1A;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #16C5CA;
+}
+.yurlic-sozdati-schet {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
