@@ -1,0 +1,158 @@
+<html lang="ru"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль (заказчик)</title>
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+</head>
+
+<style>
+
+.chat-flex-direct {
+    flex-direction: column;
+}
+</style>
+
+<body>
+    <div class="index-center center-for-chat">
+        <div class="index-content">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-header-content">
+                        <img src="img/icon (2).png" alt="Назад" class="back-arrow">
+                        <div class="user-info">
+                            <img src="img/image 4.png" alt="Аватар" class="avatar">
+                            <div class="chat-username">
+                                <span class="username">Ирина Анистратенко</span>
+                                <div class="chat-username-rate">
+                                    <img src="img/star.png">
+                                    <span>4.9 &nbsp; 33 Отзыва</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="options">
+                            <img src="img/more-horizontal.png" alt="Опции" class="ellipsis" onclick="toggleMenu()">
+                            <div class="menu" id="dropdown-menu">
+                                <div class="menu-item">
+                                    <span>Посмотреть профиль</span>
+                                    <div class="menu-icon"></div>
+                                </div>
+                                <div class="menu-item">
+                                    <span>Отменить</span>
+                                    <div class="menu-icon close-icon">✕</div>
+                                </div>
+                                <div class="menu-item">
+                                    <span>Удалить чат</span>
+                                    <div class="menu-icon close-icon">✕</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-body">
+                    <div class="date-chat">
+                        <span>Сегодня</span>
+                    </div>
+                    <div class="message bot-message">
+                        <p>Здравствуйте! Хочу предложить Вам заказ</p>
+                        <div class="predlozh-zakaz-block">
+                            <div class="predl-zak-adres-date">
+                                <div class="predl-adr-date">
+                                    <p>Нарвская</p>
+                                    <div class="kartochka-info-date-usluga">
+                                        <span>Дата и время</span>
+                                        <p>09.09.2024, 15:30</p>
+                                    </div>
+                                    <div class="kartochka-info-date-usluga">
+                                        <span>Тип уборки</span>
+                                        <p>Генеральная</p>
+                                    </div>
+                                    <div class="kartochka-info-date-usluga chat-zak-ellipsis">
+                                        <span>Дополнительно:</span>
+                                        <p>Мойка остекления балкона</p>
+                                    </div>
+                                    <div class="news-zakaz-price chat-zakaz-price">
+                                        <span>150 $</span>
+                                        <a>Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="predl-img">
+                                    <img src="img/Rectangle 30 (2).png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-time-of-sms">
+                            <span>12:10</span>
+                        </div>
+                    </div>
+                    <div class="message user-message">
+                        <p>Здравствуйте! Готов(а) выполнить ваш заказ</p>
+                        <div class="chat-time-of-sms">
+                            <span>12:10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filters-overlay show" id="filters-overlay"></div>
+
+                <div class="filters-modal show iz-p-modal-obratnaya-content" id="filters-modal">
+                    <div class="filters-modal-content">
+                        <span class="filters-close" id="filters-close-modal">&times;</span>
+                        
+                        <p>Исполнитель готов приступить к заказу. Для продолжения необходимо пополнить ваш баланс на сумму заказа</p>
+                        
+                        <div class="new-modal-button-group chat-flex-direct">
+                            <button type="button">Пополнить баланс</button>
+                            <button type="button" class="button-admin">Отказаться от специалиста</button>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <div class="chat-input-content">
+                        <img src="img/icon (22).png" alt="Прикрепить" class="clip-icon">
+                        <input type="text" placeholder="Сообщение" class="input-field">
+                        <img src="img/icon (23).png" alt="Отправить" class="send-icon">
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+<script>
+
+function toggleMenu() {
+    var menu = document.getElementById("dropdown-menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+// Закрытие меню при клике вне его
+window.onclick = function(event) {
+    if (!event.target.matches('.ellipsis')) {
+        var dropdowns = document.getElementsByClassName("menu");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+            }
+        }
+    }
+}
+
+</script>
+</body>
+</html>

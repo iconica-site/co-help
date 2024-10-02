@@ -1,0 +1,462 @@
+<html lang="ru"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль (заказчик)</title>
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+</head>
+
+<style>
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+body {
+    margin: 0px;
+}
+
+.chat-header {
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-bottom: solid 1px #0C0C0C0D;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 380px; /* Ограничение максимальной ширины */
+    z-index: 10;
+}
+
+.chat-header-content {
+    display: flex;
+    align-items: center;
+}
+
+.back-arrow {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.username {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.options {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.ellipsis {
+    width: 24px;
+    height: 24px;
+}
+
+.chat-body {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    padding-top: 85px; /* Высота хедера, чтобы контент не перекрывался */
+    padding-bottom: 60px; /* Высота инпута, чтобы контент не перекрывался */
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 12px;
+    max-width: 85%; /* Ограничение ширины сообщений */
+    word-wrap: break-word; /* Перенос длинных слов */
+}
+
+.user-message {
+    background-color: white;
+    align-self: flex-start; /* Сообщение пользователя слева */
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+
+.bot-message {
+    background-color: white;
+    align-self: flex-end; /* Ваше сообщение справа */
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #0C0C0C0D;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 380px; /* Ограничение максимальной ширины */
+    padding: 10px;
+    background-color: #fff;
+}
+
+.clip-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.input-field {
+    flex-grow: 1;
+    margin: 0 10px;
+    padding: 10px 16px;
+    border-radius: 32px;
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    box-sizing: border-box;
+    width: 100%; /* Растягиваем инпут на всю ширину */
+}
+
+.send-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.chat-input-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.chat-input-content input::placeholder {
+    color: #6D6D6D;
+    font-family: "Nunito", sans-serif;
+}
+
+.center-for-chat {
+    padding: 0px;
+}
+
+.date-chat {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 400;
+    color: #6D6D6D;
+    margin-bottom: 20px;
+}
+
+.predl-zak-adres-date {
+    display: flex;
+    justify-content: space-around;
+}
+
+.predl-adr-date p {
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+}
+
+.predl-img img {
+    width: 80px;
+    height: 87px;
+}
+
+.predl-img {
+    width: 80px;
+    height: 87px;
+}
+
+.predlozh-zakaz-block {
+    border: solid 1px #E4ECF0;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.news-zakaz-price a {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #16C5CA;
+    border-radius: 100px;
+}
+
+.chat-zakaz-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.message p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.chat-time-of-sms {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chat-time-of-sms span {
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 400;
+    color: #6D6D6D;
+    padding: 5px 0px;
+}
+
+.chat-isp-nem span {
+    display: flex;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+    color: #6D6D6D;
+    max-width: 200px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: solid 1px #16C5CA33;
+    background-color: white;
+    text-align: center;
+}
+
+.chat-isp-nem {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 115px;
+    width: 100%;
+    max-width: 380px;
+    padding: 10px;
+}
+.chat-username-rate {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.chat-username-rate span{
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 400;
+    color:#B6B6B6 ;
+}
+.chat-button-vibrati-drug {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 65px;
+    width: 100%;
+    max-width: 380px;
+    padding: 10px;
+}
+.chat-button-vibrati-drug a {
+    padding: 10px 16px;
+    border-radius: 33px;
+    background-color: #16C5CA;
+    color: white;
+}
+
+.options {
+    position: relative;
+    display: inline-block;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 10px;
+    z-index: 10;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.menu-item:not(:last-child) {
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.menu-item span {
+    font-size: 16px;
+    color: #333;
+}
+
+.menu-icon {
+    width: 16px;
+    height: 16px;
+    background-color: #E0E0E0;
+    border-radius: 4px;
+}
+
+.close-icon {
+    color: #999;
+    font-size: 16px;
+    background: none;
+}
+</style>
+
+<body>
+    <div class="index-center center-for-chat">
+        <div class="index-content">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-header-content">
+                        <img src="img/icon (2).png" alt="Назад" class="back-arrow">
+                        <div class="user-info">
+                            <img src="img/image 4.png" alt="Аватар" class="avatar">
+                            <div class="chat-username">
+                                <span class="username">Ирина Анистратенко</span>
+                                <div class="chat-username-rate">
+                                    <img src="img/star.png">
+                                    <span>4.9 &nbsp; 33 Отзыва</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="options">
+                            <img src="img/more-horizontal.png" alt="Опции" class="ellipsis" onclick="toggleMenu()">
+                            <div class="menu" id="dropdown-menu">
+                                <div class="menu-item">
+                                    <span>Посмотреть профиль</span>
+                                    <div class="menu-icon"></div>
+                                </div>
+                                <div class="menu-item">
+                                    <span>Отменить</span>
+                                    <div class="menu-icon close-icon">✕</div>
+                                </div>
+                                <div class="menu-item">
+                                    <span>Удалить чат</span>
+                                    <div class="menu-icon close-icon">✕</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-body">
+                    <div class="date-chat">
+                        <span>Сегодня</span>
+                    </div>
+                    <div class="message bot-message">
+                        <p>Здравствуйте! Хочу предложить Вам заказ</p>
+                        <div class="predlozh-zakaz-block">
+                            <div class="predl-zak-adres-date">
+                                <div class="predl-adr-date">
+                                    <p>Нарвская</p>
+                                    <div class="kartochka-info-date-usluga">
+                                        <span>Дата и время</span>
+                                        <p>09.09.2024, 15:30</p>
+                                    </div>
+                                    <div class="kartochka-info-date-usluga">
+                                        <span>Тип уборки</span>
+                                        <p>Генеральная</p>
+                                    </div>
+                                    <div class="kartochka-info-date-usluga chat-zak-ellipsis">
+                                        <span>Дополнительно:</span>
+                                        <p>Мойка остекления балкона</p>
+                                    </div>
+                                    <div class="news-zakaz-price chat-zakaz-price">
+                                        <span>150 $</span>
+                                        <a>Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="predl-img">
+                                    <img src="img/Rectangle 30 (2).png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-time-of-sms">
+                            <span>12:10</span>
+                        </div>
+                    </div>
+                    <div class="message user-message">
+                        <p>Извините, не смогу выполнить заказ</p>
+                        <div class="chat-time-of-sms">
+                            <span>12:10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-isp-nem">
+                    <span>К сожалению, исполнитель не сможет приступить к вашему заказу. Вы можете выбрать друго специалиста</span>
+                </div>
+                <div class="chat-button-vibrati-drug">
+                    <a>Выбрать другого специалиста</a>
+                </div>
+
+                <div class="chat-input">
+                    <div class="chat-input-content">
+                        <img src="img/icon (22).png" alt="Прикрепить" class="clip-icon">
+                        <input type="text" placeholder="Сообщение" class="input-field">
+                        <img src="img/icon (23).png" alt="Отправить" class="send-icon">
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+<script>
+
+function toggleMenu() {
+    var menu = document.getElementById("dropdown-menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+// Закрытие меню при клике вне его
+window.onclick = function(event) {
+    if (!event.target.matches('.ellipsis')) {
+        var dropdowns = document.getElementsByClassName("menu");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+            }
+        }
+    }
+}
+
+</script>
+</body>
+</html>
